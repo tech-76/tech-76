@@ -10,6 +10,7 @@
     --color-blue-accent: #0d6efd;
     --color-blue-hover: #0b5ed7;
     --color-border: #dee2e6;
+    --color-gold: #ffc107;
 }
 
 /* ============================================
@@ -182,8 +183,67 @@ section {
 }
 
 /* ============================================
+   Certifications Section
+   ============================================ */
+.certifications {
+    background-color: var(--color-white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background-color: var(--color-light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--color-border);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification-card:hover {
+    box-shadow: 0 8px 24px rgba(13, 110, 253, 0.15);
+    transform: translateY(-4px);
+    border-color: var(--color-blue-accent);
+}
+
+.cert-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.certification-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-navy);
+    margin-bottom: 0.5rem;
+}
+
+.cert-issuer {
+    color: var(--color-blue-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.cert-description {
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
    Skills Section
    ============================================ */
+.skills {
+    background-color: var(--color-light-gray);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -191,7 +251,7 @@ section {
 }
 
 .skill-category {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-white);
     padding: 2rem;
     border-radius: 8px;
     border-left: 4px solid var(--color-blue-accent);
@@ -404,6 +464,10 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-links {
         flex-direction: column;
         align-items: center;
@@ -439,6 +503,10 @@ section {
     }
 
     .project-card {
+        padding: 1.5rem;
+    }
+
+    .certification-card {
         padding: 1.5rem;
     }
 }
